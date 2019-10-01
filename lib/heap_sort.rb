@@ -4,5 +4,15 @@
 # Time Complexity:  ?
 # Space Complexity: ?
 def heap_sort(list)
-  raise NotImplementedError, "Method not implemented yet..."
+  heap = MinHeap.new
+  
+  list.each do |elem|
+    heap.add(elem)
+  end
+  
+  sorted = []
+  heap.each do |elem|
+    sorted << heap.remove(elem)
+  end
+  return sorted
 end
